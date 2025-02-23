@@ -30,8 +30,6 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 100vw;
-  min-height: 100vh;
 }
 
 
@@ -131,6 +129,17 @@ button:focus-visible {
 @layer base {
   * {
     @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
