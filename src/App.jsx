@@ -24,6 +24,13 @@ const App = () => {
   const cartCount = useSelector(state => state.cart.count);
   const [searchQuery, setSearchQuery] = useState('');
   
+  useEffect(()=>{
+    console.log("products; ", products)
+    console.log("categories: ", categories)
+    console.log("selectedProduct: ", selectedProduct)
+    console.log("searchQuery ", searchQuery)
+  },[categories, products, selectedProduct, searchQuery])
+  
   useEffect(() => {
     dispatch(fetchAllProducts());
     dispatch(fetchAllCategories());

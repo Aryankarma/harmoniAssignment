@@ -16,7 +16,7 @@ export const fetchAllProducts = createAsyncThunk(
 
 export const fetchAllCategories = createAsyncThunk(
   'products/fetchCategories',
-  async () => {api
+  async () => {
     const response = await fetchCategories();
     return response;
   }
